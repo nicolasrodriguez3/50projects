@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	display: grid;
+	place-content: center;
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 200;
+}
+.container {
+	width: 90vw;
+	display: flex;
+	flex-wrap: wrap;
+}
+.card {
+	width: 30%;
+	text-decoration: none;
+	margin-bottom: 1rem;
+}
+.card img {
+	max-width: 100%;
+	display: block;
+}
+.card h2 {
+	color: #222;
+	text-align: center;
+}
