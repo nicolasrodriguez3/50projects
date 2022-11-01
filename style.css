@@ -21,7 +21,7 @@ body {
 .card {
 	width: 30%;
 	text-decoration: none;
-	margin-bottom: 1rem;
+	margin: 1rem;
 }
 .card img {
 	max-width: 100%;

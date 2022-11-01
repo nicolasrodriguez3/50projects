@@ -1,5 +1,5 @@
 const $container = document.querySelector(".container"),
-	finishedProjects = ["Expanding cards", "Progress steps", "Rotating navigation"]
+	finishedProjects = ["Expanding cards", "Progress steps", "Rotating navigation", "Hidden Search", "Blurry Loading"]
 
 for(let i = 0; i < finishedProjects.length; i++){
 	const a = document.createElement("a"),
