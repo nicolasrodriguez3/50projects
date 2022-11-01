@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+	--primary-color: #3498db;
+	--secondary-color: #e0e0e0;
+}
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	background-color: #333;
+	font-family: "Lato", sans-serif;
+	color: #222;
+}
+main {
+	position: relative;
+	padding: 50px;
+	background-color: #fafafa;
+	transform-origin: top left;
+	transition: transform 0.5s linear;
+	width: 100%;
+}
+main.show-nav {
+	transform: rotate(-20deg);
+}
+article {
+	max-width: 1000px;
+	margin: 50px auto;
+}
+article > img {
+	max-width: 100%;
+	display: block;
+}
+article > h1 {
+	font-size: 2rem;
+}
+article > small {
+	color: #555;
+	font-style: italic;
+}
+article > p {
+	line-height: 1.5;
+	margin: 1rem 0;
+}
+article > h3 {
+	font-size: 1.2rem;
+	margin: 1rem 0;
+}
+.circle-container {
+	position: fixed;
+	top: -100px;
+	left: -100px;
+}
+.circle {
+	background-color: #ff7979;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	position: relative;
+	transition: transform 0.5s linear;
+}
+.show-nav .circle {
+	transform: rotate(-70deg);
+}
+.circle button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100px;
+	padding: 3px;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 26px;
+	color: #fff;
+	transition: transform 0.5s linear;
+}
+button#open {
+	left: 60%;
+}
+button#close {
+	top: 60%;
+	transform: rotate(90deg);
+	transform-origin: top left;
+}
+.menu {
+	position: fixed;
+	left: 0;
+	bottom: 40px;
+	z-index: 999;
+	padding-left: 3vh;
+}
+.menu p i{
+	font-size: 20px;
+	margin-right: 10px;
+}
+.menu p {
+	font-size: 18px;
+	margin: 40px 0;
+	text-transform: uppercase;
+	color: #fff;
+	transform: translateX(-150%);
+	transition: transform 0.4s ease-in;
+}
+.menu p + p {
+	transform: translateX(-200%);
+}
+.menu p + p + p {
+	transform: translateX(-250%);
+}
+
+.show-nav + nav p {
+	transition-delay: 0.25s;
+	transform: translateX(0%);
+}
+.show-nav + nav p + p {
+	transform: translateX(15%);
+}
+.show-nav + nav p + p + p {
+	transform: translateX(30%);
+}
