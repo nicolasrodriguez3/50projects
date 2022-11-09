@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+}
+.screen{
+	position: relative;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transition: flex-grow 1s ease-in-out;
+	overflow: hidden;
+
+}
+.screen:hover{
+	flex-grow: 4;
+}
+.left{
+	background: url(ps5.png) center/cover;
+}
+.left::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(87, 84, 236, 0.7);
+}
+.rigth{
+	background: url(xbox.jpg) 0%/cover;
+}
+.rigth::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(43, 43, 43, 0.8);
+}
+h1{
+	color: #fff;
+	position: absolute;
+	bottom: 50%;
+	white-space: nowrap;
+	font-size: min(5vw, 4rem);
+	margin: 5px auto;
+	text-align: center;
+}
+.btn{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	border: 3px solid #fff;
+	width: 15rem;
+	padding: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+}
+.left .btn:hover{
+	background-color: rgba(87, 84, 236, 1);
+	border-color: rgba(87, 84, 236, 1);
+}
+.rigth .btn:hover{
+	background-color: rgba(28, 122, 28, 1);
+	border-color: rgba(28, 122, 28, 1);
+}
