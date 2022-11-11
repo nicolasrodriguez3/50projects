@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+	background-color: #f0f0f0;
+	font-family: "Muli", sans-serif;
+}
+h1{
+	margin: 50px 0 30px;
+	text-align: center;
+}
+.container {
+	padding: 1rem;
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+}
+.faq {
+	margin: 1rem 0;
+	width: 100%;
+	border: 1px solid #9fa4a8;
+	border-radius: 10px;
+	padding: 2rem;
+	position: relative;
+	overflow: hidden;
+	transition: 0.3s ease;
+}
+.faq.open {
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.faq.open::before,
+.faq.open::after {
+	content: "\f075";
+	font-family: "Font Awesome 5 Free";
+	color: #2ecc71;
+	font-size: 7rem;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+}
+.faq.open::before {
+	color: #3498db;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+.faq h3 {
+	margin-right: 40px;
+}
+.faq p {
+	display: none;
+	margin-top: 30px;
+}
+.faq.open p {
+	display: block;
+}
+.faq-toggle {
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	color: #000;
+	border-radius: 50%;
+	font-size: 18px;
+	display: grid;
+	place-content: center;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+}
+.faq-toggle:focus{
+	outline: 0;
+	border: 2px solid #9fa4a8;
+}
+.faq-toggle :last-child,.faq.open .faq-toggle :first-child {
+	display: none;
+}
+.faq.open .faq-toggle :last-child{
+	display: block;
+}
+.faq.open .faq-toggle{
+	background-color: #9fa4a8;
+	color: #fff;
+}
