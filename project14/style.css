@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+	background: linear-gradient(to bottom, #eafbff 50%,#5290f9 50%);
+	font-family: "Muli", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+	height: 70px;
+	padding: 0 20px;
+}
+.links{
+	width: 0;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(.27,0,.67,1.2);
+}
+.links.active{
+	width: 320px;
+}
+.links.active a{
+	opacity: 1;
+	transform: rotateY(360deg);
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+	font-family: inherit;
+	opacity: 0;
+	margin: 0 5px;
+	padding: 10px;
+	transform: rotateY(0deg);
+	transition: transform .6s;
+}
+a:hover{
+	text-decoration: 2px underline #5290f9;
+}
+
+.btn{
+	height: 40px;
+	width: 40px;
+	background: none;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+}
+.btn span{
+	width: 25px;
+	height: 3px;
+	background-color: #5290f9;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) rotate(0);
+	transform-origin: center;
+	transition: transform .3s linear;
+}
+.btn span:nth-of-type(1){
+	top: 35%;
+}
+.btn span:nth-of-type(2){
+	bottom: 35%;
+}
+
+.links.active + .btn>span{
+	transform: rotate(-765deg) translate(-12px, -6px);
+}
+.links.active + .btn>span:nth-of-type(2){
+	transform: rotate(765deg) translate(-12px, 6px);
+}
