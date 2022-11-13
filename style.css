@@ -32,3 +32,8 @@ body {
 	color: #222;
 	text-align: center;
 }
+.back{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}

@@ -1,7 +1,7 @@
 const $container = document.querySelector(".container"),
-	finishedProjects = ["Expanding cards", "Progress steps", "Rotating navigation", "Hidden Search", "Blurry Loading", "Scroll Animation","Split Landing Page","Form Wave", "", "Dad Jokes", "Event KeyCodes"]
+	finishedProjects = ["Expanding cards", "Progress steps", "Rotating navigation", "Hidden Search", "Blurry Loading", "Scroll Animation","Split Landing Page","Form Wave", "Sound Board", "Dad Jokes", "Event KeyCodes", "FAQ Collapse", "Random Choice Picker"]
 
-for(let i = 0; i < finishedProjects.length; i++){
+	finishedProjects.forEach((x,i)=>{
 	const a = document.createElement("a"),
 		img = document.createElement("img"),
 		h2 = document.createElement("h2")
@@ -15,4 +15,4 @@ for(let i = 0; i < finishedProjects.length; i++){
 	a.appendChild(h2)
 
 	$container.appendChild(a)
-}
+})
